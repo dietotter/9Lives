@@ -33,5 +33,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-/Temp/*
-/Temp/
+Temp/*
+Temp/
