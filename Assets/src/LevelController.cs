@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
@@ -21,6 +22,16 @@ public class LevelController : MonoBehaviour
         catBodyPrefab = (GameObject) Resources.Load("Prefabs/Cat Body", typeof(GameObject));
 
         lifeCount = maxLifeCount;
+    }
+
+    void Update()
+    {
+        bool won = GetComponent<VictoryConditions>().checkVictoryConditions();
+        if (won)
+        {
+            Debug.Log("WE WON");
+            // MOVE TO ANOTHER LEVEL
+        }
     }
 
     public void SetStartPosition(Vector3 pos)
@@ -70,7 +81,7 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Player lost! Clearing all the bodies");
 
-        // clear all bodies
+        /*// clear all bodies
         GameObject[] bodies = GameObject.FindGameObjectsWithTag("catBody");
         foreach(GameObject obj in bodies)
         {
@@ -78,7 +89,9 @@ public class LevelController : MonoBehaviour
         }
 
         // reset life count
-        lifeCount = maxLifeCount;
+        lifeCount = maxLifeCount;*/
+
+        SceneManager.LoadScene("BossScene");
     }
 
 

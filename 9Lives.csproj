@@ -80,9 +80,13 @@
   <ItemGroup>
     <Compile Include="Assets\src\CatBody.cs" />
     <Compile Include="Assets\src\DeathZone.cs" />
+    <Compile Include="Assets\src\Enemies\Boss.cs" />
+    <Compile Include="Assets\src\Enemies\BossKillingPlatform.cs" />
+    <Compile Include="Assets\src\Enemies\Bullet.cs" />
     <Compile Include="Assets\src\HeroCat.cs" />
     <Compile Include="Assets\src\HeroFollow.cs" />
     <Compile Include="Assets\src\LevelController.cs" />
+    <Compile Include="Assets\src\VictoryConditions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Fonts\arcadeclassic\pizzadudedotdk.txt" />
